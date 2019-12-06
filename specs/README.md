@@ -15,6 +15,7 @@ themes:
 -   [ParksAndGardens](./ParksAndGardens)
 -   [PointOfInteraction](./PointOfInteraction)
 -   [PointOfInterest](./PointOfInterest)
+-   [Robot](./Robot)
 -   [StreetLighting](./StreetLighting)
 -   [Transportation](./Transportation)
 -   [UrbanMobility](./UrbanMobility)
