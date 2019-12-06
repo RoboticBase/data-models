@@ -23,13 +23,13 @@
 		"url": "https://github.com/Fiware/dataModels"
 	},
 	"dependencies": {
-		"nconf": "^0.10.0",
-		"request": "^2.81.0",
-		"glob": "^7.0.3",
 		"ajv": "^6.10.0",
+		"deasync": "^0.1.16",
 		"debug": "^4.0.1",
+		"glob": "^7.0.3",
+		"nconf": "^0.10.0",
 		"ngsi_v2": "0.2.1",
-		"deasync": "0.1.13"
+		"request": "^2.81.0"
 	},
 	"devDependencies": {
 		"eslint": "^5.6.0",
