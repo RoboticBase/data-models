@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/robots-schema.json",
+  "title": "Robots data model JSON schema",
+  "description": "Common definitions for All Robots",
+  "type": "object"
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/AMR-schema.json",
+  "title": "Autonomous Mobile Robots data model JSON schema",
+  "description": "Common definitions for Autonomous Mobile Robots",
+  "type": "object",
+  "definitions": {
+    "time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "command": {
+      "type": "string",
+      "enum": ["navi", "standby", "refresh"]
+    },
+    "emergencyCommand": {
+      "type": "string",
+      "enum": ["stop"]
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["navi", "standby", "error"]
+    },
+    "results_of_emergency_Command": {
+      "type": "string",
+      "enum": ["ack", "error"]
+    },
+    "results": {
+      "type": "string",
+      "enum": ["ack", "ignore", "error"]
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "coordinate": {
+      "type": "number",
+      "default": 0.0
+    },
+    "angle": {
+      "type": "number",
+      "default": 0.0
+    },
+
+    "point": {
+      "type": "object",
+      "properties": {
+        "x": { "$ref": "#/definitions/coordinate" },
+        "y": { "$ref": "#/definitions/coordinate" },
+        "z": { "$ref": "#/definitions/coordinate" }
+      },
+      "required": ["x", "y", "z"],
+      "additionalProperties": false
+    },
+    "orientation": {
+      "type": "object",
+      "properties": {
+        "roll": { "$ref": "#/definitions/angle" },
+        "pitch": { "$ref": "#/definitions/angle" },
+        "yaw": { "$ref": "#/definitions/angle" }
+      },
+      "required": ["roll", "pitch", "yaw"],
+      "additionalProperties": false
+    },
+    "pose": {
+      "type": "object",
+      "properties": {
+        "point": {
+          "$ref": "#/definitions/point"
+        },
+        "orientation": {
+          "$ref": "#/definitions/orientation"
+        }
+      },
+      "required": ["point", "orientation"],
+      "additionalProperties": false
+    },
+    "waypoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "point": { "$ref": "#/definitions/point" },
+          "orientation": { "$ref": "#/definitions/orientation" }
+        },
+        "required": ["point"],
+        "additionalProperties": false
+      }
+    },
+    "destination": {
+      "type": "object",
+      "properties": {
+        "point": {
+          "$ref": "#/definitions/point"
+        },
+        "orientation": {
+          "$ref": "#/definitions/orientation"
+        }
+      },
+      "required": ["point"],
+      "additionalProperties": false
+    },
+    "covariance": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 36,
+      "maxItems": 36
+    },
+    "voltage": {
+      "type": "number"
+    },
+    "current": {
+      "type": "number"
+    },
+    "battery": {
+      "type": "object",
+      "properties": {
+        "voltage": { "$ref": "#/definitions/voltage" },
+        "current": { "$ref": "#/definitions/current" }
+      },
+      "required": ["voltage"],
+      "additionalProperties": false
+    }
+  }
+}
