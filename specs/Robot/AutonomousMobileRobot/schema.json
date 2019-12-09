@@ -1,10 +1,14 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/AMR-schema.json",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json",
   "title": "Autonomous Mobile Robots data model JSON schema",
   "description": "Common definitions for Autonomous Mobile Robots",
   "type": "object",
   "definitions": {
+    "type": {
+      "type": "string",
+      "description": "NGSI Entity type"
+    },
     "time": {
       "type": "string",
       "format": "date-time"
@@ -43,7 +47,6 @@
       "type": "number",
       "default": 0.0
     },
-
     "point": {
       "type": "object",
       "properties": {
