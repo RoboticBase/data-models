@@ -1,4 +1,4 @@
-# Robots
+# Robot
 
 This folder contains a number of data models related to Robotics.
 
