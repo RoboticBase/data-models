@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/StateMessage/schema.json",
+  "type": "object",
+  "properties": {
+    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/type" },
+    "time": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "description": "Send time"
+    },
+    "mode": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/mode",
+      "description": ""
+    },
+    "errors": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/errors",
+      "description": "Error messages"
+    },
+    "pose": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/pose",
+      "description": "Current position"
+    },
+    "destination": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/destination",
+      "description": "Current destination"
+    },
+    "covariance": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/covariance",
+      "description": "Error covariance matrix of estimated position"
+    },
+    "battery": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/battery",
+      "description": "Battery states"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "time",
+    "mode",
+    "errors",
+    "pose",
+    "destination",
+    "covariance",
+    "battery"
+  ]
+}

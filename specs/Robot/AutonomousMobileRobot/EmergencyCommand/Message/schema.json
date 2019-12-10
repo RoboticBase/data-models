@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/EmergencyCommand/Message/schema.json",
+  "type": "object",
+  "properties": {
+    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/type" },
+    "time": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "description": "Send time"
+    },
+    "emergencyCommand": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/emergencyCommand"
+    }
+  },
+  "required": ["id", "type", "time", "emergencyCommand"]
+}

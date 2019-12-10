@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/EmergencyCommand/ReturnMessage/schema.json",
+  "type": "object",
+  "properties": {
+    "type": { "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/type" },
+    "time": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "description": "Send time"
+    },
+    "receivedTime": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
+      "description": "Received time"
+    },
+    "receivedEmergencyCommand": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/emergencyCommand",
+      "description": "Received emergency command"
+    },
+    "result": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/results_of_emergency_Command",
+      "description": "Reaction of the emergency command"
+    },
+
+    "errors": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/errors",
+      "description": "Error messages"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "time",
+    "receivedTime",
+    "receivedEmergencyCommand",
+    "result",
+    "errors"
+  ]
+}
