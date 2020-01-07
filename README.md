@@ -70,6 +70,7 @@ API implementation, you need to use the `keyValues` mode (`options=keyValues`).
 ## How to contribute
 
 Contributions should come in the form of pull requests.
+
 **Please note that some of the Data Models in this Repository have been adopted
 by a joint initiative between TM Forum and FIWARE Foundation. Pull Requests for
 those Data Models shall be done against the corresponding Repository at the
