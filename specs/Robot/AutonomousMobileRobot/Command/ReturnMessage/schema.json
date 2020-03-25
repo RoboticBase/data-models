@@ -38,5 +38,6 @@
     "receivedWaypoints",
     "result",
     "errors"
-  ]
+  ],
+  "additionalProperties": false
 }
