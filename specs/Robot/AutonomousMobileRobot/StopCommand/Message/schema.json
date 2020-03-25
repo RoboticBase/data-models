@@ -8,9 +8,10 @@
       "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
       "description": "Send time"
     },
-    "emergencyCommand": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/emergencyCommand"
+    "stopCommand": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/stopCommand"
     }
   },
-  "required": ["id", "type", "time", "emergencyCommand"]
+  "required": ["id", "type", "time", "stopCommand"],
+  "additionalProperties": false
 }
