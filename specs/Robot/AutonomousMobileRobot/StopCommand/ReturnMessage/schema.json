@@ -12,13 +12,13 @@
       "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/time",
       "description": "Received time"
     },
-    "receivedEmergencyCommand": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/emergencyCommand",
-      "description": "Received emergency command"
+    "receivedStopCommand": {
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/stopCommand",
+      "description": "Received stop command"
     },
     "result": {
-      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/results_of_emergency_Command",
-      "description": "Reaction of the emergency command"
+      "$ref": "https://fiware.github.io/data-models/specs/Robot/AutonomousMobileRobot/schema.json#/definitions/resultsOfStopCommand",
+      "description": "Reaction of the stop command"
     },
 
     "errors": {
@@ -31,8 +31,9 @@
     "type",
     "time",
     "receivedTime",
-    "receivedEmergencyCommand",
+    "receivedStopCommand",
     "result",
     "errors"
-  ]
+  ],
+  "additionalProperties": false
 }
